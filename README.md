@@ -34,18 +34,7 @@ klasifikasi_buah/
 
 ## Unduh aplikasi
 
-APK siap pasang ada di halaman **[Releases](https://github.com/JollKimochi/klasifikasi-kesegaran-buah/releases/latest)**. Tidak perlu memasang Android Studio atau build sendiri: unduh APK, buka di HP, izinkan pemasangan dari sumber ini, lalu pasang.
-
-## Build
-
-Persyaratan: JDK 17, Android SDK 35, Gradle wrapper sudah disertakan. Langkah ini hanya untuk pengembangan.
-
-```bash
-cd app-android
-./gradlew assembleDebug
-```
-
-APK dihasilkan di `app-android/app/build/outputs/apk/debug/app-debug.apk`. Versi siap pasang juga dibagikan lewat halaman Releases.
+APK siap pasang ada di halaman **[Releases](https://github.com/JollKimochi/klasifikasi-kesegaran-buah/releases/latest)**.
 
 ## Spesifikasi
 
