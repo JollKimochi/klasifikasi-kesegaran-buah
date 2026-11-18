@@ -1,0 +1,17 @@
+# Berkas hasil build dan alat lokal
+app-android/.gradle/
+app-android/build/
+app-android/.kotlin/
+app-android/.tooling/
+app-android/local.properties
+.idea/
+*.iml
+
+# Berkas keluaran yang dibagikan lewat Releases, bukan commit
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Konfigurasi lokal mesin
+opencode.json

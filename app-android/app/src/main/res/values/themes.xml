@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Aplikasi memakai palet terang yang sengaja dipatok, jadi warna M3
+        didefinisikan ulang agar tetap konsisten saat mode gelap sistem aktif.
+    -->
+    <style name="Theme.KesegaranBuah" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/hijau_utama</item>
+        <item name="colorOnPrimary">@color/putih</item>
+        <item name="colorPrimaryContainer">@color/hijau_muda</item>
+        <item name="colorOnPrimaryContainer">@color/hijau_tua</item>
+
+        <item name="colorSecondary">@color/hijau_utama</item>
+        <item name="colorOnSecondary">@color/putih</item>
+        <item name="colorSecondaryContainer">@color/hijau_muda</item>
+        <item name="colorOnSecondaryContainer">@color/hijau_tua</item>
+
+        <item name="colorTertiary">@color/aksen</item>
+        <item name="colorOnTertiary">@color/putih</item>
+
+        <item name="colorSurface">@color/latar_kartu</item>
+        <item name="colorOnSurface">@color/teks_utama</item>
+        <item name="colorSurfaceVariant">@color/hijau_muda_terang</item>
+        <item name="colorOnSurfaceVariant">@color/teks_sekunder</item>
+        <item name="colorOutline">@color/garis</item>
+        <item name="colorOutlineVariant">@color/garis</item>
+
+        <item name="android:colorBackground">@color/latar</item>
+        <item name="android:windowBackground">@color/latar</item>
+        <item name="android:statusBarColor">@color/latar</item>
+        <item name="android:navigationBarColor">@color/latar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <!--
+        Material 1.12 memakai token ini untuk keadaan nonaktif. Nilai bawaan
+        0.38 membuat label tombol nyaris tidak terbaca di atas kertas terang,
+        jadi dinaikkan tanpa menghilangkan kesan nonaktif dari warnanya.
+    -->
+    <item name="material_emphasis_disabled" type="dimen" format="float">0.68</item>
+
+    <style name="TextAppearance.Kesegaran.Overline" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/hijau_utama</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Title" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:lineSpacingExtra">-2dp</item>
+        <item name="android:textColor">@color/teks_utama</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">@color/teks_sekunder</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Hint" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">@color/teks_sekunder</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.TicketLabel" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/label_di_gelap</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Result" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">27sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Mono" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Kesegaran.Footnote" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/teks_sekunder</item>
+    </style>
+
+</resources>

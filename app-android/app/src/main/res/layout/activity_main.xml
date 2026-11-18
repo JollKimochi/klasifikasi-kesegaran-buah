@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/latar"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="28dp">
+
+        <!-- Penanda kecil di kanan atas, menjaga judul tetap terasa seperti sampul. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.Kesegaran.Overline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pemindai_buah" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bentuk_lingkaran_ikon"
+                android:contentDescription="@null"
+                android:importantForAccessibility="no"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ikon_buah" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextAppearance.Kesegaran.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/judul" />
+
+        <TextView
+            style="@style/TextAppearance.Kesegaran.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/subjudul" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bentuk_titik"
+            android:backgroundTint="@color/aksen"
+            android:importantForAccessibility="no" />
+
+        <!-- Kartu foto: bingkai kosong tetap terlihat sengaja, bukan kotak hampa. -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:clipToOutline="true"
+            app:cardBackgroundColor="@color/latar_kartu"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/garis"
+            app:strokeWidth="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+
+                <ImageView
+                    android:id="@+id/gambarPratinjau"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/latar_gambar"
+                    android:contentDescription="@string/deskripsi_pratinjau"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <LinearLayout
+                    android:id="@+id/ikonPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/latar_placeholder"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/bentuk_lingkaran_ikon"
+                        android:contentDescription="@null"
+                        android:importantForAccessibility="no"
+                        android:padding="14dp"
+                        android:src="@drawable/ikon_buah" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="@string/placeholder_judul"
+                        android:textColor="@color/teks_utama"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/TextAppearance.Kesegaran.Hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:maxWidth="240dp"
+                        android:text="@string/placeholder_petunjuk" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolKamera"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:enabled="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="56dp"
+            android:text="@string/ambil_foto"
+            android:textAppearance="@style/TextAppearance.Kesegaran.Button"
+            app:cornerRadius="18dp"
+            app:icon="@drawable/ikon_kamera"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconSize="20dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombolGaleri"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="52dp"
+            android:text="@string/pilih_galeri"
+            android:textAppearance="@style/TextAppearance.Kesegaran.Button"
+            app:cornerRadius="18dp"
+            app:icon="@drawable/ikon_galeri"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconSize="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progres"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:contentDescription="@string/sedang_memproses"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/hijau_utama"
+            android:visibility="gone" />
+
+        <!-- Kartu hasil bergaya tiket: fokus utama setelah foto dianalisis. -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kartuHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:accessibilityLiveRegion="polite"
+            android:clipToOutline="true"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/kartu_hasil"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            tools:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="end|bottom"
+                    android:alpha="0.07"
+                    android:contentDescription="@null"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ikon_buah"
+                    android:tint="@color/teks_di_gelap" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextAppearance.Kesegaran.TicketLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hasil" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:background="@color/garis_di_gelap"
+                            android:importantForAccessibility="no" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/teksHasil"
+                        style="@style/TextAppearance.Kesegaran.Result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/teks_di_gelap"
+                        tools:text="Apel, Segar" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/garis_di_gelap"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:id="@+id/teksKeyakinan"
+                        style="@style/TextAppearance.Kesegaran.Mono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/teks_di_gelap_lembut"
+                        tools:text="Keyakinan 96,4%, diproses 82 ms" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bentuk_titik"
+                android:backgroundTint="@color/aksen"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                style="@style/TextAppearance.Kesegaran.Footnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/catatan_perangkat" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

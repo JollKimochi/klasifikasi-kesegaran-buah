@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kesegaran Buah</string>
+    <string name="pemindai_buah">Pemindai buah</string>
+    <string name="judul">Klasifikasi\nKesegaran Buah</string>
+    <string name="subjudul">Ambil satu foto, lalu lihat kesegaran buahnya.</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="pilih_galeri">Pilih dari Galeri</string>
+    <string name="label_hasil">Hasil analisis</string>
+    <string name="placeholder_judul">Belum ada foto</string>
+    <string name="placeholder_petunjuk">Foto buah akan muncul di sini. Letakkan buah di tengah bingkai.</string>
+    <string name="catatan_perangkat">Foto diproses di perangkat, tidak diunggah.</string>
+    <string name="deskripsi_pratinjau">Pratinjau foto buah</string>
+    <string name="sedang_memproses">Sedang menganalisis foto</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Pir matang, siluet datar di dalam area aman 66x66. -->
+    <path
+        android:fillColor="#E8B23A"
+        android:pathData="M54,37C49,40 47.5,45 47.3,51C47,57.5 36,60.5 33,69.5C29.5,78 37,84.5 54,84.5C71,84.5 78.5,78 75,69.5C72,60.5 61,57.5 60.7,51C60.5,45 59,40 54,37Z" />
+
+    <!-- Tangkai pendek, menyambung ke pangkal daun. -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,38.5C54.4,35 55.2,32.5 56.4,30.8"
+        android:strokeColor="#E8B23A"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.2" />
+
+    <!-- Satu daun kecil, arahnya condong ke kanan atas. -->
+    <path
+        android:fillColor="#A6DDA9"
+        android:pathData="M56.4,30.8C60,26.9 65.2,25.4 70.8,26.2C70.4,30.6 66.1,33.3 60.9,33.9C58.6,34.1 56.7,32.8 56.4,30.8Z" />
+
+</vector>
